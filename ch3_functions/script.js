@@ -1,4 +1,4 @@
-function showMelondon (){
+/* function showMelondon (){
 console.log("London - 5 Great Things:");
 console.log("1. Rich history and iconic landmarks like the Tower of London");
 console.log("2. Diverse culture and multicultural population");
@@ -28,5 +28,20 @@ console.log ("*\n")
 showMeMilan()
 console.log ("*\n")
 showMeParis()
+*/
 
+/* function multiply(num1,num2){
+    return num1 * num2
+} */
 
+var multiply = function(num1, num2){
+    return num1 * num2
+}
+var result = multiply(8,6)
+console.log(result)
+
+var result = multiply(2,7)
+console.log(result)
+
+var result = multiply(3,9)
+console.log(result) 
