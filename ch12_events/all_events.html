@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of JavaScript Events</title>
+</head>
+<body>
+    <title>Examples of JavaScript Events</title>
+    <button id="btn">Click Me</button>
+    <br>
+<form id="loginForm">
+    <input type="text" placeholder="Username">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+
+const button = document.getElementById("btn");
+
+button.addEventListener("click", () => {
+    alert("Button clicked!");
+
+});
+
+button.addEventListener("mouseover", () => {
+    button.style.backgroundColor = "yellow";
+
+});
+
+button.addEventListener("mouseout", () => {
+    document.body.style.backgroundColor = "violet";
+});
+
+const form = document.getElementById("loginForm");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Form Submitted!");
+}); 
+</script>
+ 
+</body>
+</html>
