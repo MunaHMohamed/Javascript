@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Modules</title>
+
+    <!-- CSS inside HTML -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Modules</h1>
+
+    <button id="calculateBtn">Calculate</button>
+
+    <p id="result"></p>
+
+    <!-- JavaScript inside HTML -->
+    <script type="module">
+
+        // Import functions from the module
+        import { add, multiply } from "./mathOperations.js";
+
+        // Select HTML elements
+        const button = document.querySelector("#calculateBtn");
+        const result = document.querySelector("#result");
+
+        // Add event listener
+        button.addEventListener("click", function () {
+
+            const sum = add(10, 5);
+            const product = multiply(10, 5);
+
+            result.textContent =
+                `Sum: ${sum}, Product: ${product}`;
+        });
+
+    </script>
+
+</body>
+</html>
